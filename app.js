@@ -85,12 +85,14 @@ const filterTodo = () => {
                 todo.classList.add('d-flex')
                 todo.classList.remove('d-none')
                 input.removeAttribute('readOnly');
+
                 break;
             case 'checked':
                 if (todo.classList.contains('checked')) {
                     todo.classList.add('d-flex')
                     todo.classList.remove('d-none');
                     input.setAttribute('readOnly', 'true');
+                    todo.querySelector('button').setAttribute('disabled', 'true');
 
                 } else {
                     todo.classList.add('d-none')
@@ -102,6 +104,7 @@ const filterTodo = () => {
                     todo.classList.add('d-flex')
                     todo.classList.remove('d-none');
                     input.setAttribute('readOnly', 'true');
+                    todo.querySelector('button').setAttribute('disabled', 'true');
                 } else {
                     todo.classList.remove('d-flex')
                     todo.classList.add('d-none')
