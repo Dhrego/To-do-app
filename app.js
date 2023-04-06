@@ -85,6 +85,7 @@ const filterTodo = () => {
                 todo.classList.add('d-flex')
                 todo.classList.remove('d-none')
                 input.removeAttribute('readOnly');
+                todo.querySelector('button').removeAttribute('disabled');
 
                 break;
             case 'checked':
